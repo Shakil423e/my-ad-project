@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Ad Project</title>
-    <!-- আপনার বিজ্ঞাপন নেটওয়ার্কের স্ক্রিপ্ট যুক্ত করুন -->
-    <script src='//niphaumeenses.net/vignette.min.js' data-zone='8444411' data-sdk='show_8444411'></script>
+    <!-- আপনার বিজ্ঞাপন নেটওয়ার্কের স্ক্রিপ্ট -->
+    <script src='//niphaumeenses.net/vignette.min.js' data-zone='8443280' data-sdk='show_8443280'></script>
 </head>
 <body>
     <h1>Watch an Ad and Get Reward</h1>
     <button onclick="showAd()">Show Ad</button>
+    <br><br>
+    <button onclick="redirectToTelegram()">Join us on Telegram</button>
 
     <script>
         function showAd() {
-            alert("Ad will be shown here.");
+            // বিজ্ঞাপন দেখানোর কোড
+            show_8443280().then(() => {
+                // ব্যবহারকারী বিজ্ঞাপন দেখার পর কি ঘটবে তা এখানে লিখুন
+                alert('You have seen the ad!'); // বিজ্ঞাপন দেখা হয়েছে মেসেজ
+            }).catch(err => {
+                console.error('Ad not shown:', err); // বিজ্ঞাপন না দেখানোর ক্ষেত্রে এরর লগ
+            });
+        }
+
+        function redirectToTelegram() {
+            window.open('https://t.me/rizaafrin', '_blank'); // আপনার টেলিগ্রাম চ্যানেল লিঙ্ক
         }
     </script>
 </body>
